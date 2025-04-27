@@ -14,12 +14,12 @@ function AppRoutes() {
   return (
     <Routes>
       <Route
-        path="/login"
-        element={!token ? <LoginPage /> : <Navigate to="/" />}
+        path="/"
+        element={!token ? <LoginPage /> : <Navigate to="/SecuredPage" />}
       />
       <Route
-        path="/"
-        element={token ? <SecuredPage /> : <Navigate to="/login" />}
+        path="/SecuredPage"
+        element={token ? <SecuredPage /> : <Navigate to="/" />}
       />
     </Routes>
   );

@@ -22,7 +22,7 @@ const LoginForm = () => {
     try {
       const response = await loginApi(data);
       login(response.token);
-      navigate("/");
+      navigate("/SecuredPage");
     } catch (err) {
       setError(err.message);
     }

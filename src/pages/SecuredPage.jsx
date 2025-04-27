@@ -2,7 +2,7 @@ import { Container, Typography, Button } from "@mui/material";
 import { useAuth } from "../contexts/AuthContext";
 import CustomButton from "../components/auth/CustomButton";
 
-const HomePage = () => {
+const SecuredPage = () => {
   const { logout } = useAuth();
 
   return (
@@ -15,4 +15,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default SecuredPage;
